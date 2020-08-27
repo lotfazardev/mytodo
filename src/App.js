@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
-import UserTasks from './components/userTasks/UserTasks';
+import { Container } from '@material-ui/core';
+import HeaderDate from './components/uiComponents/headerDate';
 
 function App() {
+  
   return (
     <div className="App">
-      <UserTasks/>
+      <Container maxWidth="md">
+        <HeaderDate/>
+      </Container>
     </div>
   );
 }
