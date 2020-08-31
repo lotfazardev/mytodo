@@ -18,10 +18,10 @@ const HeaderDate = () => {
 
   return (
     <Box style={{ display: "flex", justifyContent: "center", alignItems: "center", direction: "rtl" }}>
-      <Typography style={{ color: "#673ab7", fontSize: "2.5rem", fontWeight:"bold"}}>{DateNow.weekDay}</Typography>
+      <Typography style={{ color: "#e91e63", fontSize: "2.5rem", fontWeight: "bold" }}>{DateNow.weekDay}</Typography>
       <Typography style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", paddingRight: "15px" }}>
-        <Typography style={{ fontSize: "1.25rem" }}>{`${DateNow.monthDay} ${DateNow.month}`}</Typography>
-        <Typography style={{ fontSize: "1.25rem" }}>{`سال ${DateNow.year}`}</Typography>
+        <Typography style={{ color: "white", fontSize: "1.25rem" }}>{`${DateNow.monthDay} ${DateNow.month}`}</Typography>
+        <Typography style={{ color: "white", fontSize: "1.25rem" }}>{`سال ${DateNow.year}`}</Typography>
       </Typography>
     </Box>
   );
