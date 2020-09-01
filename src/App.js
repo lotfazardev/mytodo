@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import './App.scss';
-import { addItem } from "./components/redux/Actions"
+import { addItem, changeStateItem } from "./components/redux/Actions"
 import { Container, Grid } from '@material-ui/core';
 import HeaderDate from './components/uiComponents/headerDate';
 import Fab from '@material-ui/core/Fab';
@@ -27,8 +27,10 @@ function App() {
     setTaskChange("")
   }
   const handleToggle = (index) => () => {
-    // handel toggle
+    dispatch(changeStateItem(index))
+    console.log(tasksObject)
   };
+
 
   return (
     <div className="App">
