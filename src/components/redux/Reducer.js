@@ -2,10 +2,7 @@ import { ADD_ITEM, CHANGE_STATE_ITEM } from './Actions'
 
 const initialState = {
     "tasks": [
-        {
-            "taskName": "this is a simple test task",
-            "done": false
-        }
+        
     ]
 }
 
@@ -15,7 +12,7 @@ const Reducer = (state = initialState, action) => {
             "tasks" : [
                 ...state.tasks,
                 {
-                    "taskName": `another task`,
+                    "taskName": action.payload,
                     "done" : false
                 }
             ]
