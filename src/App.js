@@ -21,10 +21,10 @@ function App() {
     setTaskChange(event.target.value)
   }
   const handelAdd = () => {
-    if (taskChange) {
+    if (taskChange.trim()) {
       dispatch(addItem(taskChange))
-      setTaskChange("")
     }
+    setTaskChange("")
   }
   const handleToggle = (index) => () => {
     // handel toggle
