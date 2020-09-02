@@ -1,7 +1,7 @@
 import React from 'react';
 import myAppTheme from './components/theme/myAppTheme';
 import './App.scss';
-import { Container, Grid, ThemeProvider, makeStyles } from '@material-ui/core';
+import { Container, Grid, ThemeProvider, makeStyles, CssBaseline } from '@material-ui/core';
 import HeaderDate from './components/uiComponents/headerDate';
 import UserTasks from './components/uiComponents/userTasks';
 import AddTask from './components/uiComponents/addTasks';
@@ -36,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={myAppTheme}>
+        <CssBaseline />
         <Container disableGutters={true} maxWidth="md" className={classes.root}>
           <Grid xs={12} className={classes.header}>
             <HeaderDate />
