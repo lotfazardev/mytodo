@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/Actions"
-import { Fab, Grid, TextField } from '@material-ui/core';
+import { Fab, Grid, TextField, makeStyles } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
+
+const useStyles = makeStyles({
+    textInputContainer : {
+        padding: "0px 20px"
+    }
+})
+
 const AddTask = () => {
+    const classes = useStyles();
     const [taskChange, setTaskChange] = useState("");
     const dispatch = useDispatch()
     const handelChange = (event) => {
@@ -20,7 +28,7 @@ const AddTask = () => {
             <Fab onClick={() => handelAdd()} color="primary" aria-label="add">
                 <AddIcon />
             </Fab>
-            <Grid xs={12} style={{ padding: "0px 20px" }}>
+            <Grid xs={12} className={classes.textInputContainer}>
                 <TextField
                     onChange={handelChange}
                     value={taskChange}
