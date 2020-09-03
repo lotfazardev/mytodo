@@ -17,11 +17,18 @@ const AddTask = () => {
     const handelChange = (event) => {
         setTaskChange(event.target.value)
     }
+    
     const handelAdd = () => {
         if (taskChange.trim()) {
             dispatch(addItem(taskChange))
         }
         setTaskChange("")
+    }
+
+    const handelPressEnter = (event) => {
+        if(event.keyCode === 13){
+            handelAdd()
+        }
     }
     return (
         <>
@@ -30,6 +37,7 @@ const AddTask = () => {
             </Fab>
             <Grid xs={12} className={classes.textInputContainer}>
                 <TextField
+                    onKeyUp={handelPressEnter}
                     onChange={handelChange}
                     value={taskChange}
                     placeholder="برنامه های خود را برای امروز وارد کنید !"
